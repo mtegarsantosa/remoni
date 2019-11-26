@@ -1,0 +1,25 @@
+{
+  "name": "remoni",
+  "version": "1.0.1",
+  "description": "Record HTTP Request Live On Your Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsandev/remoni.git"
+  },
+  "keywords": [
+    "Express",
+    "API",
+    "HTTP",
+    "Request"
+  ],
+  "author": "ArsanDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arsandev/remoni/issues"
+  },
+  "homepage": "https://github.com/arsandev/remoni#readme"
+}
