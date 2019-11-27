@@ -39,4 +39,5 @@ Monitoring data will looks like
 
 That is an example of results.
 
-The data will continue to grow as requested. You can save it to database, or whatever you want.
+
+The data will continue to grow according to request. You can save it to database, or whatever you want.
