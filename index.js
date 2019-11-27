@@ -1,22 +1,27 @@
 'use strict';
 var events = require('events')
 var em = new events.EventEmitter()
+var output=[]
 function record(req, res, next){
-    var output=[],reqFrom
+    var reqFrom
     if (req.headers.referer) reqFrom = req.headers.referer
     else reqFrom = req.headers.origin
-    let data = {
-      reqFrom: reqFrom,
-      reqTo: req.protocol + '://' + req.get('host') + req.originalUrl,
-      time: Date.now()
+    if (reqFrom) {
+      let data = {
+        reqFrom: reqFrom,
+        reqTo: req.protocol + '://' + req.get('host') + req.originalUrl,
+        method: req.method,
+        status:res.statusCode,
+        time: Date.now(),
+      }
+      output.push(data)
+      em.emit('data', output);
     }
-    output.push(data)
-    em.emit('data', output);
   next()
 }
 function get(cb){
   em.on('data', (data)=>{
-    cb(data)
+    cb(data.slice(-1)[0])
   })
 }
 module.exports = { get, record }
