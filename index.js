@@ -1,13 +1,10 @@
+'use strict';
 var events = require('events')
 var em = new events.EventEmitter()
 function record(req, res, next){
     var output=[],reqFrom
-    if (req.headers.referer) {
-      reqFrom = req.headers.referer
-    }
-    else{
-      reqFrom = req.headers.origin
-    }
+    if (req.headers.referer) reqFrom = req.headers.referer
+    else reqFrom = req.headers.origin
     let data = {
       reqFrom: reqFrom,
       reqTo: req.protocol + '://' + req.get('host') + req.originalUrl,
