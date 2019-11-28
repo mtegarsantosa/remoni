@@ -23,7 +23,6 @@
 
 Monitoring data will looks like
 
-    [
 	    {
 	      reqFrom: 'someweb.com/profile',
 	      reqTo: 'yourweb.com/api/profile',
@@ -35,8 +34,7 @@ Monitoring data will looks like
 	      time: 1574839736272
 	    }
 	    // And other request
-    ]
-
+    
 That is an example of results.
 
 
