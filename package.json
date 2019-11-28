@@ -1,6 +1,6 @@
 {
   "name": "remoni",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Record HTTP Request Live On Your Website",
   "main": "index.js",
   "scripts": {
